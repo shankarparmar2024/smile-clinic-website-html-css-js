@@ -1,0 +1,23 @@
+{
+  "name": "dental-clinic",
+  "version": "1.0.0",
+  "description": "A responsive dental clinic landing page built with HTML, CSS and JavaScript. It features a booking form with validation, a before-and-after smile slider, patient reviews carousel, treatment pricing cards, clinic locations, an FAQ accordion and a mobile-friendly menu. Created as a front-end project, with no frameworks or libraries needed.",
+  "main": "main.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shankarparmar2024/smile-clinic-website-html-css-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/shankarparmar2024/smile-clinic-website-html-css-js/issues"
+  },
+  "homepage": "https://github.com/shankarparmar2024/smile-clinic-website-html-css-js#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.5"
+  }
+}
