@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmileIndia — India's #1 Premium Dental Studio</title>
+  <meta name="description" content="SmileIndia — India's most trusted dental studio. Expert treatments in Mumbai, Delhi, Bangalore & 15+ cities. Book free consultation today!">
+  <meta property="og:title" content="SmileIndia — India's #1 Premium Dental Studio">
+  <meta property="og:description" content="Transform your smile with India's top dental specialists. Affordable EMI options available.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Figtree:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── LOADER -->
+  <div id="loader">
+    <div class="loader-logo">Smile<span>India</span></div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+    <p>Loading your smile journey…</p>
+  </div>
+
+  <!-- ── CURSOR -->
+  <div id="custom-cursor"></div>
+  <div id="cursor-follower"></div>
+
+  <!-- ── PROGRESS BAR -->
+  <div id="scroll-progress"></div>
+
+  <!--  NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="logo">
+      Smile<span>India</span>
+      <small>स्माइल इंडिया</small>
+    </div>
+
+    <nav id="main-nav">
+      <a href="#treatments">Treatments</a>
+      <a href="#smiles">Before &amp; After</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#patients">Patients</a>
+      <a href="#locations">Locations</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="nav-actions">
+      <span class="phone">📞 +91 98765 43210</span>
+      <button class="primary-btn nav-book pulse-btn" id="open-modal-nav">Book FREE Consult</button>
+    </div>
+
+    <button class="menu-btn" id="menu-btn" aria-label="Toggle menu">
+      <i></i><i></i><i></i>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <!-- Floating particles -->
+      <div class="particles" id="particles"></div>
+
+      <div class="hero-content reveal">
+        <span class="hero-pill">🏆 India's #1 Rated Dental Studio — 15+ Cities</span>
+        <h1>Your Most <em id="typed-word">Confident</em><br>Smile Starts Here</h1>
+        <p>भारत की सबसे भरोसेमंद डेंटल स्टूडियो — From Mumbai to Delhi, we transform smiles across India with world-class care and affordable EMI options.</p>
+        <div class="hero-proof">
+          <div class="avatars">
+            <img src="https://i.pravatar.cc/68?img=47" alt="Indian patient" loading="lazy">
+            <img src="https://i.pravatar.cc/68?img=32" alt="Indian patient" loading="lazy">
+            <img src="https://i.pravatar.cc/68?img=15" alt="Indian patient" loading="lazy">
+            <img src="https://i.pravatar.cc/68?img=60" alt="Indian patient" loading="lazy">
+            <img src="https://i.pravatar.cc/68?img=44" alt="Indian patient" loading="lazy">
+          </div>
+          <span>⭐⭐⭐⭐⭐</span>
+          <span>28,000+ happy Indian smiles</span>
+        </div>
+        <div class="trust-badges">
+          <span class="badge">✅ ISO Certified</span>
+          <span class="badge">🏅 NABH Accredited</span>
+          <span class="badge">💳 0% EMI Available</span>
+          <span class="badge">🇮🇳 Made in India</span>
+        </div>
+      </div>
+
+      <!-- Lead Form -->
+      <form class="lead-form reveal" id="hero-form" onsubmit="handleFormSubmit(event)">
+        <div class="form-heading">
+          <span class="eyebrow">मुफ्त परामर्श — Free Consultation</span>
+          <h3>Book Your Smile Assessment</h3>
+          <p>No cost. No obligation. Expert advice in Hindi &amp; English.</p>
+        </div>
+        <input type="text" id="form-name" placeholder="आपका नाम / Your Name" required>
+        <input type="tel" id="form-phone" placeholder="+91 Mobile Number" required>
+        <select id="form-city" style="border:1px solid var(--line); background:#fff; border-radius:12px; outline:none; width:100%; min-height:49px; padding:0 14px; color:var(--brown);">
+          <option value="">📍 Select Your City</option>
+          <option>Mumbai</option>
+          <option>Delhi / NCR</option>
+          <option>Bengaluru</option>
+          <option>Chennai</option>
+          <option>Hyderabad</option>
+          <option>Pune</option>
+          <option>Kolkata</option>
+          <option>Ahmedabad</option>
+          <option>Jaipur</option>
+          <option>Other City</option>
+        </select>
+        <label class="consent">
+          <input type="checkbox" required>
+          मैं सहमत हूँ — I agree to be contacted by SmileIndia for my free consultation.
+        </label>
+        <button type="submit" class="primary-btn pulse-btn" style="width:100%" id="hero-submit">
+          Book Free Consultation →
+        </button>
+        <div class="whatsapp-form-btn" onclick="openWhatsApp()">
+          <svg viewBox="0 0 24 24" width="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp us instead
+        </div>
+      </form>
+
+      <!-- Stats strip -->
+      <div class="stats-strip">
+        <div><strong data-target="18">0</strong><span>Years of Excellence</span></div>
+        <div><strong data-target="28000">0</strong><span>Smiles Transformed</span></div>
+        <div><strong data-target="15">0</strong><span>Cities Across India</span></div>
+        <div><strong data-target="150">0</strong><span>Specialist Doctors</span></div>
+      </div>
+    </section>
+
+    <!-- ══════════ MARQUEE STRIP ══════════ -->
+    <div class="marquee-strip">
+      <div class="marquee-track">
+        <span>🦷 Teeth Whitening</span><span>✨ Invisible Aligners</span><span>💎 Porcelain Veneers</span><span>🔩 Dental Implants</span><span>😁 Smile Makeover</span><span>🏅 NABH Accredited</span><span>💳 0% EMI</span><span>📞 Free Consultation</span>
+        <span>🦷 Teeth Whitening</span><span>✨ Invisible Aligners</span><span>💎 Porcelain Veneers</span><span>🔩 Dental Implants</span><span>😁 Smile Makeover</span><span>🏅 NABH Accredited</span><span>💳 0% EMI</span><span>📞 Free Consultation</span>
+      </div>
+    </div>
+
+    <!-- ══════════ TREATMENTS ══════════ -->
+    <section id="treatments">
+      <div class="section-title reveal">
+        <span class="eyebrow">हमारी सेवाएं — Our Services</span>
+        <h2>World-Class Treatments at Indian Prices</h2>
+        <p>Premium dental care designed for Indian families — transparent pricing, no hidden costs, flexible EMI from ₹999/month.</p>
+      </div>
+
+      <div class="treatment-grid">
+
+        <article class="treatment-card reveal" data-tilt>
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&w=800&q=80" alt="Teeth Whitening" loading="lazy">
+            <span class="card-badge hot">🔥 Most Popular</span>
+          </div>
+          <div class="card-content">
+            <h3>Teeth Whitening</h3>
+            <p>Professional laser whitening that delivers up to 10 shades brighter in a single session. Trusted by Bollywood stars and millions of Indians.</p>
+            <ul>
+              <li>In-chair laser whitening (60 min)</li>
+              <li>Custom take-home trays</li>
+              <li>Sensitivity-free formula</li>
+              <li>2-year result guarantee</li>
+            </ul>
+            <div class="price">
+              <span>Starting from</span>
+              <strong>₹3,999</strong>
+              <del class="old-price">₹7,999</del>
+            </div>
+            <button class="outline-btn" onclick="openModal()">Book This Treatment</button>
+          </div>
+        </article>
+
+        <article class="treatment-card reveal" data-tilt>
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=800&q=80" alt="Clear Aligners" loading="lazy">
+            <span class="card-badge">💳 EMI ₹1,499/mo</span>
+          </div>
+          <div class="card-content">
+            <h3>Clear Aligners</h3>
+            <p>Straighten your teeth invisibly with custom transparent aligners. No wires, no brackets — perfect for working professionals and students.</p>
+            <ul>
+              <li>3D digital smile preview</li>
+              <li>Fully removable aligners</li>
+              <li>12–18 month treatment</li>
+              <li>Free refinements included</li>
+            </ul>
+            <div class="price">
+              <span>Starting from</span>
+              <strong>₹45,000</strong>
+              <del class="old-price">₹80,000</del>
+            </div>
+            <button class="outline-btn" onclick="openModal()">Book This Treatment</button>
+          </div>
+        </article>
+
+        <article class="treatment-card reveal" data-tilt>
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80" alt="Porcelain Veneers" loading="lazy">
+            <span class="card-badge premium">💎 Premium</span>
+          </div>
+          <div class="card-content">
+            <h3>Porcelain Veneers</h3>
+            <p>Hollywood smile crafted for Indian faces. Ultra-thin porcelain shells that transform chipped, stained, or misaligned teeth into perfection.</p>
+            <ul>
+              <li>Shade-matched to your skin tone</li>
+              <li>Minimal tooth preparation</li>
+              <li>10–15 year lifespan</li>
+              <li>Same-day temporaries</li>
+            </ul>
+            <div class="price">
+              <span>Starting from</span>
+              <strong>₹12,000<small>/tooth</small></strong>
+              <del class="old-price">₹20,000</del>
+            </div>
+            <button class="outline-btn" onclick="openModal()">Book This Treatment</button>
+          </div>
+        </article>
+
+        <article class="treatment-card reveal" data-tilt>
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80" alt="Dental Implants" loading="lazy">
+            <span class="card-badge">🔩 Permanent</span>
+          </div>
+          <div class="card-content">
+            <h3>Dental Implants</h3>
+            <p>Replace missing teeth permanently with titanium implants. Looks, feels, and functions exactly like natural teeth — for life.</p>
+            <ul>
+              <li>Swiss-grade titanium implant</li>
+              <li>Zirconia crown included</li>
+              <li>All-on-4 available</li>
+              <li>Lifetime structural warranty</li>
+            </ul>
+            <div class="price">
+              <span>Starting from</span>
+              <strong>₹25,000<small>/tooth</small></strong>
+              <del class="old-price">₹55,000</del>
+            </div>
+            <button class="outline-btn" onclick="openModal()">Book This Treatment</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- BEFORE / AFTER -->
+    <section class="smiles-section" id="smiles">
+      <div class="section-title reveal" style="padding: 104px 24px 0;">
+        <span class="eyebrow">असली परिणाम — Real Transformations</span>
+        <h2>Real Indian. Real Results.</h2>
+        <p>See the life-changing transformations our patients across India have experienced.</p>
+      </div>
+
+      <div class="smile-layout">
+        <div class="compare" id="compare-slider">
+          <img src="https://images.unsplash.com/photo-1601972599720-36938d4ecd31?auto=format&fit=crop&w=900&q=85" alt="After smile" style="width:100%;height:100%;object-fit:cover;object-position:center 25%;">
+          <div class="before" id="before-div" style="width:50%;">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=85" alt="Before smile" style="width:900px;max-width:none;height:100%;object-fit:cover;object-position:center 25%;">
+          </div>
+          <div class="compare-line" id="compare-line" style="left:50%;">
+            <span id="compare-handle">⟺</span>
+          </div>
+          <span class="before-label">पहले / Before</span>
+          <span class="after-label">बाद में / After</span>
+          <input type="range" id="compare-range" min="0" max="100" value="50" aria-label="Compare">
+        </div>
+
+        <div class="smile-copy">
+          <div class="quote-mark">"</div>
+          <h3>मेरी मुस्कान वापस आ गई!</h3>
+          <p>After years of hiding my smile, SmileIndia gave me veneers that completely changed my confidence. The process was so comfortable — even my family couldn't believe the transformation!</p>
+          <strong>— Priya Sharma, Veneers Patient, Mumbai</strong>
+          <div class="rating-mini" style="margin: 12px 0;">⭐⭐⭐⭐⭐</div>
+          <button class="text-btn" onclick="openModal()">Transform My Smile →</button>
+        </div>
+      </div>
+    </section>
+
+    <!--WHY US -->
+    <section id="why-us">
+      <div class="why-grid">
+        <div class="team-photo reveal">
+          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=85" alt="SmileIndia expert dental team">
+          <div class="floating-card animate-float">
+            <strong>4.9 ★</strong>
+            <span>28,000+ Google Reviews</span>
+          </div>
+          <div class="floating-card-2 animate-float-delay">
+            <strong>🏅 NABH</strong>
+            <span>Accredited Clinic</span>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="section-title" style="text-align:left;margin-bottom:32px;">
+            <span class="eyebrow">हम क्यों खास हैं — Why SmileIndia</span>
+            <h2>Excellence Rooted in India</h2>
+            <p>We combine cutting-edge global technology with deep understanding of Indian dental needs — affordable, accessible, and world-class.</p>
+          </div>
+          <div class="accordion" id="why-accordion">
+            <div class="accordion-item open">
+              <button onclick="toggleAccordion(this)">
+                AI-Powered Smile Design <b>−</b>
+              </button>
+              <div class="accordion-body">
+                <p>Our proprietary AI technology creates a 3D preview of your future smile before any treatment begins. See your transformation digitally and approve it — only then do we start. Available in all 15+ cities.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button onclick="toggleAccordion(this)">
+                Top Indian Dental Specialists <b>+</b>
+              </button>
+              <div class="accordion-body">
+                <p>150+ MDS-qualified specialists trained at AIIMS, KEM, and top international institutions. Average 12 years of experience, with expertise in every dental specialty from orthodontics to implantology.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button onclick="toggleAccordion(this)">
+                Flexible EMI — No Cost <b>+</b>
+              </button>
+              <div class="accordion-body">
+                <p>We believe every Indian deserves a beautiful smile. Zero-cost EMI up to 24 months via Bajaj Finserv, HDFC, and all major banks. No hidden charges. No down payment. Start your treatment from just ₹999/month.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button onclick="toggleAccordion(this)">
+                Hindi + Regional Language Support <b>+</b>
+              </button>
+              <div class="accordion-body">
+                <p>Our team speaks Hindi, Tamil, Telugu, Kannada, Marathi, Bengali, and Gujarati. We explain every procedure in your language so you feel completely comfortable and informed throughout your treatment.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button onclick="toggleAccordion(this)">
+                Pan-India Network — 15+ Cities <b>+</b>
+              </button>
+              <div class="accordion-body">
+                <p>With clinics in Mumbai, Delhi, Bengaluru, Chennai, Hyderabad, Pune, Kolkata, Jaipur, Ahmedabad and more — SmileIndia is always near you. One appointment history, any clinic, any city.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PATIENT STORIES-->
+    <section class="patients-section" id="patients">
+      <div class="section-title reveal">
+        <span class="eyebrow">हमारे मरीज़ — Patient Stories</span>
+        <h2>28,000 Indian Smiles &amp; Counting</h2>
+        <p>From students to seniors, from metros to tier-2 cities — SmileIndia has transformed smiles across Bharat.</p>
+      </div>
+
+      <div class="carousel-shell">
+        <button class="carousel-arrow left" onclick="scrollCarousel('patient-carousel',-1)" aria-label="Previous">‹</button>
+        <div class="patient-carousel" id="patient-carousel">
+
+          <div class="patient-card">
+            <img src="https://i.pravatar.cc/400?img=47" alt="Kavya R., Bengaluru" loading="lazy">
+            <div>
+              <div class="stars">★★★★★</div>
+              <p>"Clear aligners ne meri zindagi badal di! Nobody knew I was wearing them during my MBA presentation. Highly recommend!"</p>
+              <strong>Kavya Reddy</strong>
+              <small>Clear Aligners · Bengaluru</small>
+            </div>
+          </div>
+
+          <div class="patient-card">
+            <img src="https://i.pravatar.cc/400?img=33" alt="Arjun M., Mumbai" loading="lazy">
+            <div>
+              <div class="stars">★★★★★</div>
+              <p>"Dental implants ke baad mujhe pehchana nahi! The team at SmileIndia Mumbai was so professional and caring throughout."</p>
+              <strong>Arjun Mehta</strong>
+              <small>Dental Implants · Mumbai</small>
+            </div>
+          </div>
+
+          <div class="patient-card">
+            <img src="https://i.pravatar.cc/400?img=25" alt="Sunita P., Delhi" loading="lazy">
+            <div>
+              <div class="stars">★★★★★</div>
+              <p>"Veneers lagwane ke baad mera pura confidence badh gaya! EMI option ne bahut help ki — very affordable quality."</p>
+              <strong>Sunita Patel</strong>
+              <small>Porcelain Veneers · Delhi</small>
+            </div>
+          </div>
+
+          <div class="patient-card">
+            <img src="https://i.pravatar.cc/400?img=60" alt="Rohan S., Hyderabad" loading="lazy">
+            <div>
+              <div class="stars">★★★★★</div>
+              <p>"Teeth whitening took just 1 hour and the results were incredible! Got 8 shades brighter before my sister's wedding. 🎉"</p>
+              <strong>Rohan Sharma</strong>
+              <small>Teeth Whitening · Hyderabad</small>
+            </div>
+          </div>
+
+          <div class="patient-card">
+            <img src="https://i.pravatar.cc/400?img=15" alt="Meena K., Chennai" loading="lazy">
+            <div>
+              <div class="stars">★★★★★</div>
+              <p>"Tamil la pesuvanga staff! Enakku romba comfortable ah irundhuchi. The AI smile design was mind-blowing technology!"</p>
+              <strong>Meena Krishnan</strong>
+              <small>Smile Makeover · Chennai</small>
+            </div>
+          </div>
+
+          <div class="patient-card">
+            <img src="https://i.pravatar.cc/400?img=44" alt="Vikram J., Pune" loading="lazy">
+            <div>
+              <div class="stars">★★★★★</div>
+              <p>"Best dental experience in Pune. Zero pain, amazing staff, and my new smile has changed how people perceive me professionally!"</p>
+              <strong>Vikram Joshi</strong>
+              <small>Full Smile Redesign · Pune</small>
+            </div>
+          </div>
+
+        </div>
+        <button class="carousel-arrow right" onclick="scrollCarousel('patient-carousel',1)" aria-label="Next">›</button>
+      </div>
+    </section>
+
+    <!--INNOVATION-->
+    <section id="innovation">
+      <div class="section-title reveal">
+        <span class="eyebrow">हमारी टेक्नॉलजी — Our Technology</span>
+        <h2>Future of Dentistry, Available Today in India</h2>
+        <p>We bring the world's most advanced dental technology to Indian patients at accessible prices.</p>
+      </div>
+
+      <div class="innovation-grid">
+        <div class="innovation-card reveal">
+          <img src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&w=600&q=80" alt="AI Smile Design" loading="lazy">
+          <div>
+            <span>AI TECHNOLOGY</span>
+            <h3>AI Smile Design</h3>
+            <p>See your new smile before treatment begins with our Indian-developed AI technology.</p>
+            <a href="#" onclick="openModal();return false;">Explore →</a>
+          </div>
+        </div>
+        <div class="innovation-card reveal">
+          <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80" alt="Laser Dentistry" loading="lazy">
+          <div>
+            <span>PAINLESS</span>
+            <h3>Laser Dentistry</h3>
+            <p>Needle-free, drill-free dental care. Our laser technology means zero pain and faster healing.</p>
+            <a href="#" onclick="openModal();return false;">Explore →</a>
+          </div>
+        </div>
+        <div class="innovation-card reveal">
+          <img src="https://images.unsplash.com/photo-1587614387466-0a72ca909e16?auto=format&fit=crop&w=600&q=80" alt="Same Day Crowns" loading="lazy">
+          <div>
+            <span>SAME DAY</span>
+            <h3>One-Visit Crowns</h3>
+            <p>Walk in. Walk out with a perfect crown — all in one appointment. No more temporary crowns.</p>
+            <a href="#" onclick="openModal();return false;">Explore →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--GOOGLE REVIEWS-->
+    <section class="reviews-section" id="reviews">
+      <div>
+        <div class="rating">
+          <div class="google-g">G</div>
+          <div>
+            <strong>4.9</strong>
+            <div class="stars" style="color:#fbbc04;font-size:18px;">★★★★★</div>
+            <p>28,000+ Google Reviews across India</p>
+          </div>
+        </div>
+        <div class="review-controls" style="margin-top:28px;">
+          <button onclick="scrollCarousel('review-carousel',-1)" aria-label="Prev">‹</button>
+          <button onclick="scrollCarousel('review-carousel',1)" aria-label="Next">›</button>
+        </div>
+      </div>
+
+      <div class="review-carousel" id="review-carousel">
+        <div class="review">
+          <div>
+            <img src="https://i.pravatar.cc/84?img=11" alt="Reviewer">
+            <div><strong>Anjali Verma</strong><small>Mumbai · 1 week ago</small></div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p>"Bahut hi badhiya experience raha! EMI ne treatment ko affordable bana diya. Staff Hindi mein samjhate hain. 10/10!"</p>
+        </div>
+
+        <div class="review">
+          <div>
+            <img src="https://i.pravatar.cc/84?img=53" alt="Reviewer">
+            <div><strong>Rajesh Iyer</strong><small>Bengaluru · 2 weeks ago</small></div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p>"The AI smile preview technology is absolutely stunning. I approved my smile design before treatment. Genuinely world-class care."</p>
+        </div>
+
+        <div class="review">
+          <div>
+            <img src="https://i.pravatar.cc/84?img=29" alt="Reviewer">
+            <div><strong>Pooja Nair</strong><small>Chennai · 3 weeks ago</small></div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p>"Enna peru sollanum puriyala! Best dental clinic I've ever visited. The staff speaks Tamil and they made me feel so comfortable!"</p>
+        </div>
+
+        <div class="review">
+          <div>
+            <img src="https://i.pravatar.cc/84?img=68" alt="Reviewer">
+            <div><strong>Amit Gupta</strong><small>Delhi NCR · 1 month ago</small></div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p>"Pehle mujhe dant ke doctor se bahut darr lagta tha. SmileIndia ne ye darr khatam kar diya! Zero pain treatment. Kya team hai!"</p>
+        </div>
+
+        <div class="review">
+          <div>
+            <img src="https://i.pravatar.cc/84?img=41" alt="Reviewer">
+            <div><strong>Deepika Rao</strong><small>Hyderabad · 1 month ago</small></div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p>"Naa marriage ki tarvata veneers chesanu — best decision ever! Results were absolutely stunning. Everyone at the wedding noticed!"</p>
+        </div>
+      </div>
+    </section>
+
+    <!--LOCATIONS-->
+    <section id="locations">
+      <div class="section-title reveal">
+        <span class="eyebrow">हमारे क्लिनिक — Our Clinics</span>
+        <h2>15+ Clinics Across India</h2>
+        <p>Expert dental care is never far away. Find your nearest SmileIndia clinic and book today.</p>
+      </div>
+
+      <div class="city-grid reveal">
+        <button onclick="openModal()" id="loc-mum">
+          <span class="pin">📍</span><span><strong>Mumbai</strong><small>3 clinic locations</small></span><span>›</span>
+        </button>
+        <button onclick="openModal()" id="loc-del">
+          <span class="pin">📍</span><span><strong>Delhi / NCR</strong><small>4 clinic locations</small></span><span>›</span>
+        </button>
+        <button onclick="openModal()" id="loc-blr">
+          <span class="pin">📍</span><span><strong>Bengaluru</strong><small>3 clinic locations</small></span><span>›</span>
+        </button>
+        <button onclick="openModal()" id="loc-che">
+          <span class="pin">📍</span><span><strong>Chennai</strong><small>2 clinic locations</small></span><span>›</span>
+        </button>
+        <button onclick="openModal()" id="loc-hyd">
+          <span class="pin">📍</span><span><strong>Hyderabad</strong><small>2 clinic locations</small></span><span>›</span>
+        </button>
+        <button onclick="openModal()" id="loc-pun">
+          <span class="pin">📍</span><span><strong>Pune</strong><small>1 clinic location</small></span><span>›</span>
+        </button>
+        <button onclick="openModal()" id="loc-kol">
+          <span class="pin">📍</span><span><strong>Kolkata</strong><small>1 clinic location</small></span><span>›</span>
+        </button>
+        <button onclick="openModal()" id="loc-jai">
+          <span class="pin">📍</span><span><strong>Jaipur</strong><small>Coming soon</small></span><span>›</span>
+        </button>
+        <button onclick="openModal()" id="loc-ahm">
+          <span class="pin">📍</span><span><strong>Ahmedabad</strong><small>Coming soon</small></span><span>›</span>
+        </button>
+      </div>
+
+      <div class="gallery reveal">
+        <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=600&q=80" alt="SmileIndia clinic" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=400&q=80" alt="Modern dental chair" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1588776814546-daab30f310ce?auto=format&fit=crop&w=400&q=80" alt="Dental consultation" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=700&q=80" alt="Happy Indian patient" loading="lazy">
+      </div>
+    </section>
+
+    <!--OFFER BANNER-->
+    <section class="offer" id="offer">
+      <div class="offer-copy">
+        <span class="eyebrow">🎉 Diwali Special Offer</span>
+        <h2>Apni Smile Chamkao is Diwali!</h2>
+        <p>This festive season, get India's most loved Smile Makeover Package at an unbelievable price. Free whitening + AI design preview included!</p>
+        <div class="offer-price">
+          <span>Smile Makeover Package from</span>
+          <strong>₹24,999 <small>was ₹55,000</small></strong>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px;">
+          <button class="light-btn" onclick="openModal()" id="offer-cta">Claim Diwali Offer →</button>
+          <button class="whatsapp-inline-btn" onclick="openWhatsApp()">
+            <svg viewBox="0 0 24 24" width="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Enquiry
+          </button>
+        </div>
+        <div class="countdown-wrap">
+          <p style="font-size:13px;margin-top:20px;opacity:.9;">⏰ Offer ends in:</p>
+          <div class="countdown" id="countdown">
+            <div><span id="cd-days">00</span><small>Days</small></div>
+            <div><span id="cd-hrs">00</span><small>Hours</small></div>
+            <div><span id="cd-min">00</span><small>Mins</small></div>
+            <div><span id="cd-sec">00</span><small>Secs</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="offer-image">
+        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=700&q=85" alt="Beautiful smile result" loading="lazy">
+        <div class="anniversary">
+          <strong>18</strong>
+          <span>साल का<br>विश्वास</span>
+        </div>
+      </div>
+    </section>
+
+    <!--FAQ -->
+    <section id="faq">
+      <div class="section-title reveal">
+        <span class="eyebrow">अक्सर पूछे जाने वाले सवाल</span>
+        <h2>Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-wrap">
+        <div class="accordion" id="faq-accordion">
+          <div class="accordion-item open">
+            <button onclick="toggleAccordion(this)">
+              क्या EMI पर treatment मिल सकती है? <b>−</b>
+            </button>
+            <div class="accordion-body">
+              <p>Bilkul! We offer zero-cost EMI for up to 24 months via Bajaj Finserv, HDFC, Axis, ICICI, and 15+ banks. No down payment required. Start treatment from as little as ₹999/month. Our finance team will help you choose the best plan.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button onclick="toggleAccordion(this)">
+              Is the free consultation really free? <b>+</b>
+            </button>
+            <div class="accordion-body">
+              <p>Yes, 100% free! Your consultation includes a full dental check-up, digital X-rays (if needed), AI smile design preview, and a detailed treatment plan with transparent pricing. No hidden charges, no pressure to buy anything.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button onclick="toggleAccordion(this)">
+              Teeth whitening kitne time mein hoti hai? <b>+</b>
+            </button>
+            <div class="accordion-body">
+              <p>In-chair laser whitening takes just 45–60 minutes. Results can last 2–3 years with proper care. We also provide custom home trays for touch-ups. Results typically range from 6–10 shades brighter, depending on your teeth.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button onclick="toggleAccordion(this)">
+              Kya treatment mein dard hoga? <b>+</b>
+            </button>
+            <div class="accordion-body">
+              <p>Nahi! Pain-free dentistry is our promise. We use laser technology and advanced local anesthesia to ensure zero discomfort. Many patients are surprised — they feel nothing during treatment. We also offer sedation dentistry for anxiety patients.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button onclick="toggleAccordion(this)">
+              Do you accept insurance in India? <b>+</b>
+            </button>
+            <div class="accordion-body">
+              <p>We accept Star Health, HDFC ERGO, Niva Bupa, Care Health, and most major Indian health insurance plans. We also accept corporate health cards. Our billing team will handle all paperwork directly with your insurer.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="reveal">
+          <span class="eyebrow">अभी बात करें</span>
+          <h3>Still Have Questions?</h3>
+          <p>हमारी team Hindi, Tamil, Telugu, Kannada, Marathi aur Bengali mein aapki help karne ke liye ready hai.</p>
+          <br>
+          <button class="primary-btn" onclick="openModal()" id="faq-cta" style="width:100%">📞 Get Free Callback</button>
+          <br><br>
+          <button class="whatsapp-btn-full" onclick="openWhatsApp()">
+            <svg viewBox="0 0 24 24" width="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat on WhatsApp
+          </button>
+          <p style="font-size:12px;color:var(--muted);margin-top:16px;">📞 +91 98765 43210<br>🕐 Mon–Sun: 8am – 9pm IST</p>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  <!--FOOTER-->
+  <footer>
+    <div>
+      <div class="logo light">Smile<span>India</span><small>स्माइल इंडिया</small></div>
+      <p>India's most trusted dental studio since 2006. NABH accredited clinics in 15+ cities. Transforming smiles with affordable world-class care for every Indian family.</p>
+      <div style="display:flex;gap:12px;margin-top:16px;">
+        <a href="#" aria-label="Facebook">📘</a>
+        <a href="#" aria-label="Instagram">📸</a>
+        <a href="#" aria-label="YouTube">▶️</a>
+        <a href="#" onclick="openWhatsApp();return false;" aria-label="WhatsApp">💬</a>
+      </div>
+    </div>
+    <div>
+      <strong>Treatments</strong>
+      <a href="#treatments">Teeth Whitening</a>
+      <a href="#treatments">Clear Aligners</a>
+      <a href="#treatments">Veneers</a>
+      <a href="#treatments">Dental Implants</a>
+      <a href="#treatments">Smile Makeover</a>
+    </div>
+    <div>
+      <strong>Company</strong>
+      <a href="#why-us">About SmileIndia</a>
+      <a href="#innovation">Technology</a>
+      <a href="#patients">Patient Stories</a>
+      <a href="#locations">Our Clinics</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div>
+      <strong>Contact</strong>
+      <span>📞 +91 98765 43210</span>
+      <span>✉️ hello@smileindia.in</span>
+      <span>🕐 Mon–Sun: 8am–9pm IST</span>
+      <span>💳 EMI Available on All Treatments</span>
+      <span>🏅 NABH Accredited</span>
+    </div>
+    <div class="copyright">
+      <p>© 2024 SmileIndia Dental Studio Pvt. Ltd. All rights reserved. &nbsp;|&nbsp; Privacy Policy &nbsp;|&nbsp; Terms &nbsp;|&nbsp; <a href="#" style="color:var(--orange);">MCI Registered</a></p>
+    </div>
+  </footer>
+
+  <!--BOOKING MODAL-->
+  <div class="modal-backdrop" id="modal-backdrop" style="display:none;" onclick="closeModalOnBackdrop(event)">
+    <div class="modal" id="modal-box">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">✕</button>
+      <form class="modal-form" id="modal-form" onsubmit="handleModalSubmit(event)">
+        <div class="form-heading">
+          <span class="eyebrow">मुफ्त परामर्श — Free Consultation</span>
+          <h3>Book Your SmileIndia Appointment</h3>
+          <p>Our team will call you within 30 minutes to confirm. 100% Free, no obligation.</p>
+        </div>
+        <input type="text"  id="modal-name"  placeholder="आपका नाम / Your Name" required>
+        <input type="tel"   id="modal-phone" placeholder="+91 Mobile Number" required>
+        <select id="modal-city" style="border:1px solid var(--line);background:#fff;border-radius:12px;outline:none;width:100%;min-height:49px;padding:0 14px;color:var(--brown);">
+          <option value="">📍 Select Your City</option>
+          <option>Mumbai</option><option>Delhi / NCR</option><option>Bengaluru</option>
+          <option>Chennai</option><option>Hyderabad</option><option>Pune</option>
+          <option>Kolkata</option><option>Jaipur</option><option>Ahmedabad</option>
+          <option>Other City</option>
+        </select>
+        <select id="modal-treatment" style="border:1px solid var(--line);background:#fff;border-radius:12px;outline:none;width:100%;min-height:49px;padding:0 14px;color:var(--brown);">
+          <option value="">🦷 Select Treatment</option>
+          <option>Teeth Whitening</option><option>Clear Aligners / Invisalign</option>
+          <option>Porcelain Veneers</option><option>Dental Implants</option>
+          <option>Smile Makeover Package</option><option>General Check-up</option>
+        </select>
+        <label class="consent">
+          <input type="checkbox" required>
+          मैं SmileIndia से free consultation के लिए contact में आने के लिए सहमत हूँ।
+        </label>
+        <button type="submit" class="primary-btn pulse-btn" style="width:100%">📅 Confirm My Free Booking →</button>
+        <button type="button" class="whatsapp-btn-full" onclick="openWhatsApp()">
+          <svg viewBox="0 0 24 24" width="16" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Book via WhatsApp Instead
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!--WHATSAPP FLOAT-->
+  <button class="whatsapp-float" id="whatsapp-float" onclick="openWhatsApp()" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="wp-tooltip">Chat on WhatsApp</span>
+  </button>
+
+  <!-- Mobile sticky CTA -->
+  <div class="mobile-book-bar">
+    <button class="primary-btn pulse-btn" onclick="openModal()" id="mobile-cta" style="flex:1">📅 Book FREE Consult</button>
+    <button class="whatsapp-mini" onclick="openWhatsApp()" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" width="22" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </button>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast">✅ Booked! Hamari team aapko 30 minutes mein call karegi. 🙏</div>
+
+  <script src="main.js"></script>
+</body>
+</html>
